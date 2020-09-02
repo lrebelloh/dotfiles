@@ -1,0 +1,42 @@
+# Utils
+alias copy='rsync -p --progress -h'
+
+colorflag="-G"
+alias ls="command ls ${colorflag}"
+alias l="ls -lhF ${colorflag}" # all files, in long format
+alias ll="l"
+alias la="ls -laF ${colorflag}" # all files inc dotfiles, in long format
+alias lsd='ls -lF ${colorflag} | grep "^d"' # only directories
+
+# Git
+alias gl='git log --graph --pretty=format:'\''%Cred%h%Creset -%C(yellow)%d%Creset %Cblue%an%Creset - %s %Cgreen(%cr)%Creset'\'' --abbrev-commit --date=relative'
+alias g='git status'
+alias gd='git diff'
+alias gdc='git diff --cached'
+alias gp='git pull --rebase'
+alias gb='git branch'
+alias gba='git branch -a'
+alias gbd='git branch -d'
+alias gbD='git branch -D'
+alias gs='git stash'
+
+# Rails
+alias bers='bundle exec rails s'
+alias berc='bundle exec rails c'
+
+# Bundle
+alias rake='bundle exec rake'
+alias rspec='bundle exec rspec'
+alias migrate='bundle exec rake db:migrate'
+
+aftermerge(){
+  branch=`git branch 2> /dev/null | grep \* | sed 's/* //'`
+
+  git checkout $1
+  git pull --rebase
+  git remote prune origin
+  git branch -d $branch
+
+  clear
+  git branch -a
+}
