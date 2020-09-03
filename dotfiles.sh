@@ -1,4 +1,3 @@
-
 #! /bin/bash
 
 ORIGINAL_COLOR="\033[1;0m"
@@ -33,4 +32,3 @@ for file in *; do
 
   echo -e "${ORIGINAL_COLOR}"
 done
-
