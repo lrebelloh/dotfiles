@@ -35,7 +35,7 @@ Clone this repo:
 Grant permission to installation script and then run it:
 
 ```
-chmod +x ~/.dotfiles/bootstrap.sh
+chmod +x ~/.dotfiles/dotfiles.sh
 
 ~/.dotfiles/bootstrap.sh
 ```
