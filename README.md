@@ -37,7 +37,7 @@ Grant permission to installation script and then run it:
 ```
 chmod +x ~/.dotfiles/dotfiles.sh
 
-~/.dotfiles/bootstrap.sh
+~/.dotfiles/dotfiles.sh
 ```
 
 #### Spaceship Theme:
