@@ -70,7 +70,7 @@ Symlink `spaceship.zsh-theme` to your oh-my-zsh custom themes directory:
 
 ```
   brew tap homebrew/cask-fonts
-  brew cask install font-fira-code
+  brew install --cask font-fira-code
 ```
 
 ##### Ubuntu
